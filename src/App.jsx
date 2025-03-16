@@ -5,11 +5,12 @@ import Features from "./components/Features";
 import Story from "./components/Story";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
+// import Contactt from "./pages/Contact"
+// import Aboutt from "./pages/About"
 function App() {
   return (
     <main className="relative min-h-screen w-screen overflow-x-hidden">
-      <NavBar />
+      <NavBar/> 
       <Hero />
       <About />
       <Features />

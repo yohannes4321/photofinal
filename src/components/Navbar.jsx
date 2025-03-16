@@ -6,7 +6,7 @@ import { TiLocationArrow } from "react-icons/ti";
 
 import Button from "./Button";
 
-const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
+const navItems = ["Home", "Service", "About", "Contact"];
 
 const NavBar = () => {
   // State for toggling audio and visual indicator
@@ -65,30 +65,27 @@ const NavBar = () => {
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"
+      className="fixed inset-x-0 top-4 z-50 h-20 border-none transition-all duration-700 sm:inset-x-6"
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
-        <nav className="flex size-full items-center justify-between p-4">
+        <nav className="flex size-full items-center justify-between p-6">
           {/* Logo and Product button */}
-          <div className="flex items-center gap-7">
-            <img src="/img/logo.png" alt="logo" className="w-10" />
-
-             
-          </div>
+          
 
           {/* Navigation Links and Audio Button */}
           <div className="flex h-full items-center">
-            <div className="hidden md:block">
-              {navItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
+          <div className="hidden md:flex flex-row items-center space-x-16 pl-100">
+  {navItems.map((item, index) => (
+    <a
+      key={index}
+      href={`#${item.toLowerCase()}`}
+      className="relative px-6 py-3 text-xl font-semibold text-white transition-all duration-300 rounded-md hover:bg-orange-500 hover:text-white"
+    >
+      {item}
+    </a>
+  ))}
+</div>
+
 
             <button
               onClick={toggleAudioIndicator}
